@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlk Web Sayfam</title>
+    <style>
+        /* CSS: Sayfanın görünümünü şekillendirir */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Arka plan rengi */
+            color: #333;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #0056b3; /* Başlık rengi */
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML: Sayfanın yapısını oluşturur -->
+    <h1>Web Geliştirmeye Hoş Geldiniz!</h1>
+    <p id="introText">
+        Bu, web geliştirme yolculuğunuzdaki ilk adımlarınızı temsil eden basit bir web sayfasıdır.
+        HTML ile içeriği, CSS ile görünümü ve JavaScript ile etkileşimi sağlıyoruz.
+    </p>
+    <button onclick="changeText()">Mesajı Değiştir</button>
+
+    <script>
+        /* JavaScript: Sayfaya dinamiklik ve etkileşim katar */
+        function changeText() {
+            const paragraph = document.getElementById('introText');
+            if (paragraph.textContent.includes('ilk adımlarınızı')) {
+                paragraph.textContent = 'Harika! JavaScript ile sayfanın içeriğini değiştirmeyi başardınız. Keşfetmeye devam edin!';
+                paragraph.style.color = '#28a745'; // Metin rengini değiştir
+            } else {
+                paragraph.textContent = 'Bu, web geliştirme yolculuğunuzdaki ilk adımlarınızı temsil eden basit bir web sayfasıdır. HTML ile içeriği, CSS ile görünümü ve JavaScript ile etkileşimi sağlıyoruz.';
+                paragraph.style.color = '#333'; // Orijinal rengine dön
+            }
+        }
+    </script>
+</body>
+</html>
